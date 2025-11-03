@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fabulous Coach – Coach Sportif</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+<!-- HERO -->
+<header class="hero">
+  <img src="WhatsApp Image 2025-10-08 at 14.33.11.jpeg" alt="Fabulous Coach" class="hero-logo">
+  <h1>Fabulous Coach</h1>
+  <p>Transforme ton corps, dépasse tes limites.</p>
+</header>
+
+<!-- CARTES -->
+<div class="cards">
+  <div class="card red">
+    <p class="tip">Discipline</p>
+    <p class="second-text">La clé de tout progrès</p>
+  </div>
+
+  <div class="card blue">
+    <p class="tip">Motivation</p>
+    <p class="second-text">Chaque jour est une nouvelle chance</p>
+  </div>
+
+  <div class="card green">
+    <p class="tip">Résultats</p>
+    <p class="second-text">Ton corps, ta réussite</p>
+  </div>
+</div>
+
+<!-- COACH -->
+<div class="coach-card">
+  <div class="card-bg"></div>
+  <div class="card-inner">
+    <div class="card-ring"></div>
+    <div class="card-content">
+      <h3>Fabien Jablonski</h3>
+      <p class="subtitle">Coach sportif certifié – Fabulous Coach</p>
+      <p class="description">
+        Spécialisé en musculation et remise en forme depuis plus de 10 ans.<br>
+        J’aide mes clients à atteindre leurs objectifs physiques et mentaux grâce à un accompagnement sur mesure.
+      </p>
+      <span class="year">Depuis 2015</span>
+    </div>
+  </div>
+</div>
+
+<!-- EXPÉRIENCES -->
+<section class="section light-bg" id="experience">
+  <h2 class="section-title">Expériences Professionnelles</h2>
+  <ul class="experience-list">
+    <li><strong>2024 - 2025 :</strong> Coach sportif – Basic Fit Mistral 7</li>
+    <li><strong>2023 - 2024 :</strong> Responsable de salle – L’Orange Bleue</li>
+    <li><strong>2017 - 2023 :</strong> Éducateur sportif – Yakha Sport</li>
+    <li><strong>2015 - 2016 :</strong> Éducateur sportif – Bodypur (Amazonia)</li>
+    <li><strong>2008 - 2012 :</strong> Danseur classique et contemporain</li>
+  </ul>
+</section>
+
+<!-- FORMULAIRE DE CONTACT -->
+<section id="contact" class="contact-section">
+  <h2>Contact & Coaching</h2>
+  <p>Remplissez ce formulaire pour commencer votre transformation.</p>
+
+  <form 
+    id="coachForm"
+    action="https://formsubmit.co/almousellyadham@gmail.com"
+    method="POST"
+    class="contact-form"
+  >
+
+    <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" name="_subject" value="Nouvelle demande coaching !">
+    <input type="hidden" name="_template" value="table">
+
+    <!-- Étape 1 -->
+    <div class="form-step step-1 active">
+      <label>Nom et Prénom *</label>
+      <input type="text" name="Nom-prenom" required>
+
+      <label>Sexe *</label>
+      <select name="Sexe" required>
+        <option disabled selected>Choisir...</option>
+        <option>Homme</option>
+        <option>Femme</option>
+      </select>
+
+      <label>Taille (cm) *</label>
+      <input type="number" name="Taille" required>
+
+      <label>Âge *</label>
+      <input type="number" name="Age" required>
+
+      <label>Poids actuel (kg) *</label>
+      <input type="number" name="Poids-actuel" required>
+
+      <label>Objectif (kg) *</label>
+      <input type="number" name="Poids-objectif" required>
+
+      <label>Email *</label>
+      <input type="email" name="Email" required>
+
+      <label>Téléphone *</label>
+      <input type="tel" name="Telephone" required>
+
+      <button type="button" class="btn-next">Suivant ➜</button>
+    </div>
+
+    <!-- Étape 2 -->
+    <div class="form-step step-2">
+      <label>Profession</label>
+      <input type="text" name="Profession">
+
+      <label>Horaires & contraintes</label>
+      <textarea name="Horaires"></textarea>
+
+      <label>Niveau d’activité</label>
+      <select name="Activite">
+        <option>Sédentaire</option>
+        <option>Actif modéré</option>
+        <option>Très actif</option>
+      </select>
+
+      <label>Temps disponible (h/sem)</label>
+      <input type="text" name="Temps-disponible">
+
+      <label>Sports actuels</label>
+      <textarea name="Sport"></textarea>
+
+      <label>Informations importantes</label>
+      <textarea name="Infos-importantes"></textarea>
+
+      <label>Questions ou attentes spécifiques</label>
+      <textarea name="Questions"></textarea>
+
+      <label>Contraintes particulières</label>
+      <textarea name="Contraintes"></textarea>
+
+      <div class="step-buttons">
+        <button type="button" class="btn-back">⬅️ Retour</button>
+        <button type="submit" class="btn-send">Envoyer ✅</button>
+      </div>
+    </div>
+  </form>
+
+  <!-- Message de succès -->
+  <p id="successMessage" class="success-message" style="display:none;">
+    ✅ Merci, je te recontacte vite !
+  </p>
+</section>
+
+<footer class="footer">
+  <p>© 2025 Fabulous Coach – Tous droits réservés.</p>
+</footer>
+
+<!-- SCRIPT -->
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const steps = document.querySelectorAll(".form-step");
+  const nextBtn = document.querySelector(".btn-next");
+  const backBtn = document.querySelector(".btn-back");
+  const form = document.getElementById("coachForm");
+  const successMessage = document.getElementById("successMessage");
+
+  let currentStep = 0;
+
+  nextBtn.addEventListener("click", () => {
+    steps[currentStep].classList.remove("active");
+    currentStep = 1;
+    steps[currentStep].classList.add("active");
+  });
+
+  backBtn.addEventListener("click", () => {
+    steps[currentStep].classList.remove("active");
+    currentStep = 0;
+    steps[currentStep].classList.add("active");
+  });
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    const formData = new FormData(form);
+    fetch(form.action, { method: "POST", body: formData })
+      .then(() => {
+        form.reset();
+        steps[currentStep].classList.remove("active");
+        currentStep = 0;
+        steps[currentStep].classList.add("active");
+        successMessage.style.display = "block";
+      })
+      .catch(() => {
+        alert("Une erreur est survenue, veuillez réessayer.");
+      });
+  });
+});
+</script>
+
+</body>
+</html>

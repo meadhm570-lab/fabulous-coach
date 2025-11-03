@@ -1,0 +1,820 @@
+/* ---- GLOBAL ---- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  color: #3b2e2e;
+  background-color: #eae0d3;
+  scroll-behavior: smooth;
+}
+
+/* ---- SECTIONS ---- */
+.section {
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2rem;
+  color: #4b342f;
+  margin-bottom: 30px;
+  font-weight: 700;
+}
+
+.section-text {
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6;
+  font-size: 1.1rem;
+}
+
+.light-bg {
+  background-color: #f3e9dd;
+}
+
+/* ---- HERO ---- */
+.hero {
+  background: linear-gradient(to bottom, #c8a27f, #5a3e36);
+  color: #fff;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.hero-logo {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+  object-fit: cover;
+  border: 3px solid #fff;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 1.3rem;
+  opacity: 0.9;
+}
+
+/* ---- EXPERIENCE ---- */
+.experience-list {
+  max-width: 750px;
+  margin: 0 auto;
+  text-align: left;
+  background: #fffdfb;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  line-height: 1.8;
+}
+
+.experience-list li {
+  margin-bottom: 8px;
+}
+
+/* ---- RESULTS ---- */
+.results {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+}
+
+.result-card {
+  background: #fffdfb;
+  border-radius: 15px;
+  width: 300px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.result-card:hover {
+  transform: scale(1.03);
+}
+
+.result-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.result-card p {
+  padding: 15px;
+  font-style: italic;
+  color: #3b2e2e;
+}
+
+.result-card span {
+  display: block;
+  padding: 0 15px 15px;
+  font-size: 0.9rem;
+  color: #6b4b3b;
+}
+
+/* ---- CONTACT ---- */
+.contact-info {
+  max-width: 600px;
+  margin: 0 auto;
+  background: #fffdfb;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  text-align: left;
+  padding: 25px;
+  line-height: 1.8;
+}
+
+.contact-info a {
+  color: #9b6735;
+  text-decoration: none;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 15px;
+  background: #9b6735;
+  color: white;
+  padding: 10px 25px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #7d4f26;
+}
+
+/* ---- FOOTER ---- */
+.footer {
+  background: #5a3e36;
+  color: #fff;
+  text-align: center;
+  padding: 40px 20px;
+  font-size: 0.9rem;
+}
+
+/* ---- RESPONSIVE ---- */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2.3rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .section {
+    padding: 60px 15px;
+  }
+
+  .results {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .result-card {
+    width: 90%;
+  }
+
+  .experience-list {
+    padding: 20px;
+  }
+
+  .contact-info {
+    padding: 20px;
+  }
+}
+/* ---- CARTE COACH ---- */
+.coach-card {
+  position: relative;
+  width: 200px;
+  height: 300px;
+  margin: 40px auto;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.card-bg {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, #d6b68a, #b38867);
+  border-radius: 20px;
+}
+
+.card-inner {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  backdrop-filter: blur(8px);
+  border-radius: 20px;
+}
+
+.card-ring {
+  width: 130px;
+  height: 130px;
+  margin: 0 auto;
+  border-radius: 50%;
+  background: conic-gradient(from 0deg, #b77d5d, #f3c59d, #b77d5d);
+  animation: spin 12s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.card-content {
+  text-align: center;
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+  background: rgba(34, 34, 34, 0.7);
+  border-radius: 15px;
+  padding: 10px;
+}
+
+.card-content h3 {
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+}
+
+.card-content p {
+  font-size: 0.9rem;
+  color: #d8d8d8;
+  margin-bottom: 5px;
+}
+
+.card-content .year {
+  font-size: 0.8rem;
+  color: #cda676;
+}
+
+.card-icon {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  background: rgba(255, 255, 255, 0.2);
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s;
+}
+
+.card-icon:hover {
+  background: rgba(255, 255, 255, 0.35);
+}
+
+.arrow-icon {
+  width: 16px;
+  height: 16px;
+  color: #fff;
+}
+
+/* ---- MOBILE ---- */
+@media (max-width: 768px) {
+  .coach-card 
+  /* ---- CARTE COACH (version longue) ---- */
+.coach-card {
+  position: relative;
+  width: 320px;
+  height: 420px;
+  margin: 40px auto;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.card-bg {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, #d6b68a, #b38867);
+  border-radius: 20px;
+}
+
+.card-inner {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  backdrop-filter: blur(8px);
+  border-radius: 20px;
+}
+
+.card-ring {
+  width: 140px;
+  height: 140px;
+  margin: 10px auto;
+  border-radius: 50%;
+  background: conic-gradient(from 0deg, #b77d5d, #f3c59d, #b77d5d);
+  animation: spin 14s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.card-content {
+  text-align: center;
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+  background: rgba(34, 34, 34, 0.75);
+  border-radius: 15px;
+  padding: 15px;
+}
+
+.card-content h3 {
+  font-size: 1.3rem;
+  margin-bottom: 5px;
+}
+
+.card-content .subtitle {
+  font-size: 0.95rem;
+  color: #f3c59d;
+  margin-bottom: 10px;
+}
+
+.card-content .description {
+  font-size: 0.9rem;
+  color: #ddd;
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+
+.card-content .year {
+  display: block;
+  font-size: 0.8rem;
+  color: #cda676;
+  margin-top: 5px;
+}
+
+.card-icon {
+  position: absolute;
+  bottom: 12px;
+  right: 12px;
+  background: rgba(255, 255, 255, 0.2);
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s;
+}
+
+.card-icon:hover {
+  background: rgba(255, 255, 255, 0.35);
+}
+
+.arrow-icon {
+  width: 18px;
+  height: 18px;
+  color: #fff;
+}
+
+/* ---- MOBILE ---- */
+@media (max-width: 768px) {
+  .coach-card {
+    width: 90%;
+    height: auto;
+  }
+
+  .card-ring {
+    width: 110px;
+    height: 110px;
+  }
+
+  .card-content {
+    padding: 12px;
+  }
+
+  .card-content .description {
+    font-size: 0.85rem;
+  }
+}
+{
+    width: 160px;
+    height: 240px;
+  }
+
+  .card-content h3 {
+    font-size: 1rem;
+  }
+
+  .card-content p {
+    font-size: 0.8rem;
+  }
+
+  .card-ring {
+    width: 100px;
+    height: 100px;
+  }
+}
+/* ---- CARTES COLORÉES (Uiverse) ---- */
+.cards {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  margin-top: 30px;
+}
+
+.cards .red {
+  background-color: #d57a66;
+}
+
+.cards .blue {
+  background-color: #b79b85;
+}
+
+.cards .green {
+  background-color: #7c5f47;
+}
+
+.cards .card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  height: 100px;
+  width: 250px;
+  border-radius: 10px;
+  color: white;
+  cursor: pointer;
+  transition: 400ms;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.cards .card p.tip {
+  font-size: 1.1em;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.cards .card p.second-text {
+  font-size: 0.8em;
+}
+
+.cards .card:hover {
+  transform: scale(1.1);
+}
+
+.cards:hover > .card:not(:hover) {
+  filter: blur(10px);
+  transform: scale(0.9);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .cards {
+    gap: 10px;
+  }
+
+  .cards .card {
+    width: 90%;
+    height: 90px;
+  }
+}
+/* ---- CARTE ANIMÉE (Uiverse vinodjangid07) ---- */
+.card {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  background: lightgrey;
+  border-radius: 30px;
+  overflow: hidden;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  transition: all 1s ease-in-out;
+  border: 2px solid rgb(255, 255, 255);
+  margin: 40px auto;
+}
+
+.background {
+  position: absolute;
+  inset: 0;
+  background-color: #b69a7d;
+  background-image: linear-gradient(43deg, #b69a7d 0%, #caa57a 46%, #f4d6a0 100%);
+}
+
+.logo {
+  position: absolute;
+  right: 50%;
+  bottom: 50%;
+  transform: translate(50%, 50%);
+  transition: all 0.6s ease-in-out;
+  font-size: 1.2em;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: 2px;
+  text-align: center;
+}
+
+.icon .svg {
+  fill: rgba(255, 255, 255, 0.85);
+  width: 22px;
+  height: 22px;
+  transition: all 0.5s ease-in-out;
+}
+
+.box {
+  position: absolute;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.35);
+  border-top: 2px solid #fff;
+  border-radius: 20% 10% 60% 0%;
+  box-shadow: rgba(100, 100, 111, 0.3) -7px 7px 20px 0px;
+  transform-origin: bottom left;
+  transition: all 1s ease-in-out;
+}
+
+.box1 { width: 70%; height: 70%; bottom: -70%; left: -70%; }
+.box2 { width: 50%; height: 50%; bottom: -50%; left: -50%; transition-delay: 0.2s; }
+.box3 { width: 30%; height: 30%; bottom: -30%; left: -30%; transition-delay: 0.4s; }
+.box4 { width: 10%; height: 10%; bottom: -10%; left: -10%; transition-delay: 0.6s; }
+
+.card:hover {
+  transform: scale(1.08);
+}
+
+.card:hover .box {
+  bottom: -1px;
+  left: -1px;
+}
+
+.card:hover .logo {
+  transform: translate(70px, -52px);
+  letter-spacing: 0px;
+}
+
+.box:hover .icon .svg {
+  filter: drop-shadow(0 0 5px white);
+}
+/* ---- ÉVALUATION ÉTOILES (Uiverse LeonKohli) ---- */
+.radio {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-direction: row-reverse;
+  margin-top: 20px;
+}
+
+.radio > input {
+  position: absolute;
+  appearance: none;
+}
+
+.radio > label {
+  cursor: pointer;
+  font-size: 32px;
+  position: relative;
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.radio > label::before,
+.radio > label::after {
+  content: "";
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  background-color: #ff9e0b;
+  border-radius: 50%;
+  opacity: 0;
+  transform: scale(0);
+  transition: transform 0.4s ease, opacity 0.4s ease;
+  animation: particle-explosion 1s ease-out;
+}
+
+.radio > label::before {
+  top: -15px;
+  left: 50%;
+  transform: translateX(-50%) scale(0);
+}
+
+.radio > label::after {
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%) scale(0);
+}
+
+.radio > label:hover::before,
+.radio > label:hover::after {
+  opacity: 1;
+  transform: translateX(-50%) scale(1.5);
+}
+
+.radio > label:hover {
+  transform: scale(1.2);
+  animation: pulse 0.6s infinite alternate;
+}
+
+.radio > label:hover,
+.radio > input:checked + label,
+.radio > input:checked + label ~ label {
+  color: #ff9e0b;
+  text-shadow: 0 0 15px rgba(255, 158, 11, 0.9);
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  100% { transform: scale(1.1); }
+}
+
+@keyframes particle-explosion {
+  0% { opacity: 0; transform: scale(0.5); }
+  50% { opacity: 1; transform: scale(1.2); }
+  100% { opacity: 0; transform: scale(0.5); }
+}
+.contact-section {
+  background: #f4eee4;
+  padding: 60px 20px;
+  border-radius: 20px;
+  max-width: 800px;
+  margin: 50px auto;
+  text-align: center;
+}
+
+.contact-form {
+  margin-top: 30px;
+}
+
+.contact-form label {
+  font-weight: bold;
+  margin-top: 10px;
+  text-align: left;
+  display: block;
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+  width: 100%;
+  padding: 14px;
+  font-size: 1rem;
+  border: 2px solid #c7b08a;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  background: #fff;
+}
+
+.contact-form textarea {
+  min-height: 80px;
+}
+
+.btn-next,
+.btn-back,
+.btn-send {
+  width: 100%;
+  padding: 14px;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: 15px;
+  transition: 0.3s;
+}
+
+.btn-next,
+.btn-back {
+  background: #9b7755;
+  color: #fff;
+}
+
+.btn-next:hover,
+.btn-back:hover {
+  background: #7b5f43;
+}
+
+.btn-send {
+  background: #006c3b;
+  color: #fff;
+  font-weight: bold;
+}
+
+.btn-send:hover {
+  background: #00522d;
+}
+
+/* Multi-step form */
+.form-step {
+  display: none;
+}
+
+.form-step.active {
+  display: block;
+}
+
+.step-buttons {
+  display: flex;
+  gap: 10px;
+}
+/* FORMULAIRE CONTACT */
+.contact-section {
+  background: #f4eee4;
+  padding: 60px 20px;
+  border-radius: 20px;
+  max-width: 800px;
+  margin: 50px auto;
+  text-align: center;
+}
+
+.contact-form label {
+  font-weight: 600;
+  display: block;
+  text-align: left;
+  margin-top: 10px;
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+  width: 100%;
+  padding: 14px;
+  font-size: 1rem;
+  border: 2px solid #c7b08a;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  background: #fff;
+}
+
+.contact-form textarea {
+  min-height: 80px;
+}
+
+.btn-next,
+.btn-back,
+.btn-send {
+  width: 100%;
+  padding: 14px;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: 15px;
+  transition: 0.3s;
+}
+
+.btn-next,
+.btn-back {
+  background: #9b7755;
+  color: #fff;
+}
+
+.btn-next:hover,
+.btn-back:hover {
+  background: #7b5f43;
+}
+
+.btn-send {
+  background: #006c3b;
+  color: #fff;
+  font-weight: bold;
+}
+
+.btn-send:hover {
+  background: #00522d;
+}
+
+/* MULTI-ÉTAPES */
+.form-step { display: none; }
+.form-step.active { display: block; }
+
+.success-message {
+  margin-top: 20px;
+  background: #d1f7d6;
+  color: #2b6a32;
+  padding: 12px;
+  border-radius: 10px;
+  font-weight: 600;
+  border: 1px solid #8cd194;
+}
