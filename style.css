@@ -881,3 +881,71 @@ body {
   filter: invert(20%) sepia(10%) saturate(200%) hue-rotate(10deg);
 }
 
+/* ---- FOOTER ---- */
+.footer {
+  background: #5a3e36;
+  color: #fff;
+  text-align: center;
+  padding: 40px 20px;
+  border-top: 4px solid #c7b08a;
+}
+
+.footer h2 {
+  font-size: 1.3rem;
+  margin-bottom: 25px;
+  color: #f8e8d4;
+}
+
+/* ---- NOUVEAU STYLE UIVERSE.IO ---- */
+.social-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-bottom: 25px;
+}
+
+.socialContainer {
+  width: 42px;
+  height: 42px;
+  background-color: rgb(65, 29, 131);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  transition-duration: 0.3s;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+.socialContainer:hover {
+  transform: scale(1.15);
+}
+
+.containerOne:hover {
+  background-color: #d62976; /* Instagram */
+}
+.containerTwo:hover {
+  background-color: #000000; /* TikTok */
+}
+.containerThree:hover {
+  background-color: #1877f2; /* Facebook */
+}
+.containerFour:hover {
+  background-color: #128c7e; /* Email (vert WhatsApp style) */
+}
+
+.socialSvg {
+  width: 17px;
+}
+
+.socialSvg path {
+  fill: #fff;
+}
+
+.footer p {
+  margin-top: 10px;
+  font-size: 0.9rem;
+  color: #e0d4c8;
+}
