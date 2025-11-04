@@ -828,3 +828,56 @@ body {
   font-weight: 600;
   border: 1px solid #8cd194;
 }
+/* ---- FOOTER ---- */
+.footer {
+  background: #5a3e36;
+  color: #fff;
+  text-align: center;
+  padding: 50px 20px;
+  border-top: 4px solid #c7b08a;
+}
+
+.footer h2 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  color: #f8e8d4;
+}
+
+.footer p {
+  margin-top: 20px;
+  font-size: 0.9rem;
+  color: #ddd;
+}
+
+/* ---- ICÔNES RÉSEAUX SOCIAUX ---- */
+.social-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.social-links a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  text-decoration: none;
+  transition: 0.3s;
+  border: 2px solid #d8b892;
+}
+
+.social-links a:hover {
+  transform: scale(1.1);
+  background: #d8b892;
+}
+
+.social-links img {
+  width: 24px;
+  height: 24px;
+  filter: invert(20%) sepia(10%) saturate(200%) hue-rotate(10deg);
+}
+
