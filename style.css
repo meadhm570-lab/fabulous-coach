@@ -67,6 +67,16 @@ body {
   font-size: 1.3rem;
   opacity: 0.9;
 }
+.hero-logo {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 20px;
+  background-color: #fff;
+  padding: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
 
 /* ---- EXPERIENCE ---- */
 .experience-list {
