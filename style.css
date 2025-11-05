@@ -1,6 +1,6 @@
-/* ============================
-   STYLES GÉNÉRAUX
-============================ */
+/* ==============================
+   STYLES GLOBAUX
+============================== */
 * {
   margin: 0;
   padding: 0;
@@ -14,117 +14,12 @@ body {
   scroll-behavior: smooth;
 }
 
-/* ============================
-   HERO AVEC FOND
-============================ */
-.hero {
-  position: relative;
-  height: 100vh;
-  background: url("https://via.placeholder.com/1920x1080") center/cover no-repeat;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  color: #fff;
-}
-
-.overlay {
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.5);
-  z-index: 1;
-}
-
-/* Navbar */
-.navbar {
-  position: relative;
-  z-index: 2;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 40px;
-  background: rgba(0, 0, 0, 0.3);
-  backdrop-filter: blur(5px);
-}
-
-.logo {
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 2px solid #fff;
-}
-
-.brand-name {
-  font-size: 1.2rem;
-  font-weight: 600;
-  color: #f3c59d;
-  margin-left: 10px;
-}
-
-.navbar-left {
-  display: flex;
-  align-items: center;
-}
-
-.navbar-right a {
-  color: #fff;
-  font-size: 1.4rem;
-  margin-left: 15px;
-  transition: 0.3s;
-}
-
-.navbar-right a:hover {
-  color: #f3c59d;
-  transform: scale(1.1);
-}
-
-/* Texte principal */
-.hero-content {
-  position: relative;
-  z-index: 2;
-  text-align: center;
-  margin-bottom: 60px;
-  padding: 0 20px;
-}
-
-.hero-content h1 {
-  font-size: 3rem;
-  font-weight: 700;
-  color: #fff;
-}
-
-.hero-content h2 {
-  font-size: 1.5rem;
-  color: #f3c59d;
-  margin: 15px 0;
-}
-
-.hero-content p {
-  font-size: 1.1rem;
-  max-width: 700px;
-  margin: 0 auto;
-  line-height: 1.6;
-  color: #f8f8f8;
-}
-
-.since {
-  display: block;
-  margin-top: 20px;
-  font-size: 1rem;
-  color: #f3c59d;
-  font-weight: 600;
-}
-
-/* ============================
-   EXPÉRIENCES
-============================ */
+/* ==============================
+   SECTIONS
+============================== */
 .section {
   padding: 80px 20px;
   text-align: center;
-}
-
-.light-bg {
-  background-color: #f3e9dd;
 }
 
 .section-title {
@@ -134,6 +29,158 @@ body {
   font-weight: 700;
 }
 
+.light-bg {
+  background-color: #f3e9dd;
+}
+
+/* ==============================
+   HERO SECTION
+============================== */
+.hero {
+  background: linear-gradient(to bottom, #c8a27f, #5a3e36);
+  color: #fff;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.hero-logo {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 20px;
+  background-color: #fff;
+  padding: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 1.3rem;
+  opacity: 0.9;
+}
+
+/* ==============================
+   CARTES VALEURS
+============================== */
+.cards {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  margin: 40px 0;
+}
+
+.cards .card {
+  width: 250px;
+  height: 100px;
+  border-radius: 10px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  transition: 0.4s;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.red { background-color: #d57a66; }
+.blue { background-color: #b79b85; }
+.green { background-color: #7c5f47; }
+
+.cards .card:hover {
+  transform: scale(1.1);
+}
+
+.cards:hover > .card:not(:hover) {
+  filter: blur(10px);
+  transform: scale(0.9);
+}
+
+/* ==============================
+   COACH CARD
+============================== */
+.coach-card {
+  position: relative;
+  width: 320px;
+  height: 420px;
+  margin: 40px auto;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.card-bg {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, #d6b68a, #b38867);
+}
+
+.card-inner {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-ring {
+  width: 140px;
+  height: 140px;
+  margin: 10px auto;
+  border-radius: 50%;
+  background: conic-gradient(from 0deg, #b77d5d, #f3c59d, #b77d5d);
+  animation: spin 14s linear infinite;
+}
+
+@keyframes spin { to { transform: rotate(360deg); } }
+
+.card-content {
+  text-align: center;
+  color: #fff;
+  background: rgba(34, 34, 34, 0.7);
+  border-radius: 15px;
+  padding: 15px;
+}
+
+.card-content h3 {
+  font-size: 1.3rem;
+}
+
+.card-content .subtitle {
+  font-size: 0.95rem;
+  color: #f3c59d;
+  margin: 10px 0;
+}
+
+.card-content .description {
+  font-size: 0.9rem;
+  color: #ddd;
+  line-height: 1.5;
+}
+
+.card-content .year {
+  font-size: 0.8rem;
+  color: #cda676;
+}
+
+/* ==============================
+   EXPÉRIENCES
+============================== */
 .experience-list {
   max-width: 750px;
   margin: 0 auto;
@@ -145,23 +192,9 @@ body {
   line-height: 1.8;
 }
 
-.experience-list li {
-  margin-bottom: 10px;
-  position: relative;
-  padding-left: 20px;
-}
-
-.experience-list li::before {
-  content: "•";
-  position: absolute;
-  left: 0;
-  color: #b77d5d;
-  font-weight: bold;
-}
-
-/* ============================
-   FORMULAIRE CONTACT
-============================ */
+/* ==============================
+   FORMULAIRE DE CONTACT
+============================== */
 .contact-section {
   background: #f4eee4;
   padding: 60px 20px;
@@ -179,6 +212,7 @@ body {
 }
 
 .contact-form input,
+.contact-form select,
 .contact-form textarea {
   width: 100%;
   padding: 14px;
@@ -189,8 +223,10 @@ body {
   background: #fff;
 }
 
-.contact-form textarea { min-height: 100px; }
+.contact-form textarea { min-height: 80px; }
 
+.btn-next,
+.btn-back,
 .btn-send {
   width: 100%;
   padding: 14px;
@@ -198,15 +234,24 @@ body {
   border: none;
   border-radius: 10px;
   cursor: pointer;
-  background: #9b7755;
-  color: #fff;
-  font-weight: bold;
+  margin-top: 15px;
   transition: 0.3s;
 }
 
-.btn-send:hover {
-  background: #7b5f43;
+.btn-next,
+.btn-back { background: #9b7755; color: #fff; }
+.btn-next:hover,
+.btn-back:hover { background: #7b5f43; }
+
+.btn-send {
+  background: #006c3b;
+  color: #fff;
+  font-weight: bold;
 }
+.btn-send:hover { background: #00522d; }
+
+.form-step { display: none; }
+.form-step.active { display: block; }
 
 .success-message {
   margin-top: 20px;
@@ -218,9 +263,106 @@ body {
   border: 1px solid #8cd194;
 }
 
-/* ============================
+/* ==============================
+   CARTE DU COACH (Bas de page)
+============================== */
+.card-client {
+  background: #8a6a4d;
+  width: 14rem;
+  margin: 40px auto;
+  padding: 25px 20px;
+  border: 3px solid #d6b48c;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.25);
+  border-radius: 12px;
+  text-align: center;
+  color: #fff;
+  transition: 0.3s;
+}
+
+.card-client:hover { transform: translateY(-8px); }
+
+.user-picture {
+  overflow: hidden;
+  width: 5.5rem;
+  height: 5.5rem;
+  border: 3px solid #d6b48c;
+  border-radius: 999px;
+  margin: 0 auto 15px;
+  background: #fff;
+}
+
+.user-picture img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.name-client {
+  margin-top: 15px;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.name-client span {
+  display: block;
+  font-weight: 300;
+  font-size: 15px;
+  color: #f8e8d4;
+}
+
+.social-media:before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2px;
+  margin: 20px 0;
+  background: #d6b48c;
+}
+
+.social-media a {
+  position: relative;
+  margin: 0 8px;
+  text-decoration: none;
+  color: inherit;
+  display: inline-block;
+}
+
+.social-media a svg {
+  width: 1.2rem;
+  fill: #fff;
+  transition: 0.3s;
+}
+
+.social-media a:hover svg {
+  fill: #d6b48c;
+  transform: scale(1.15);
+}
+
+.tooltip-social {
+  background: #262626;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  padding: 0.4rem 0.5rem;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  opacity: 0;
+  pointer-events: none;
+  transform: translate(-50%, -90%);
+  transition: 0.2s;
+  color: #fff;
+}
+
+.social-media a:hover .tooltip-social {
+  opacity: 1;
+  transform: translate(-50%, -130%);
+}
+
+/* ==============================
    FOOTER
-============================ */
+============================== */
 .footer {
   background: #5a3e36;
   color: #fff;
@@ -234,14 +376,17 @@ body {
   color: #e0d4c8;
 }
 
-/* ============================
+/* ==============================
    RESPONSIVE
-============================ */
+============================== */
 @media (max-width: 768px) {
-  .hero-content h1 { font-size: 2rem; }
-  .hero-content h2 { font-size: 1.2rem; }
-  .hero-content p { font-size: 1rem; }
-  .navbar { padding: 15px 20px; }
-  .navbar-right a { font-size: 1.2rem; margin-left: 10px; }
-  .logo { width: 50px; height: 50px; }
+  .hero h1 { font-size: 2.3rem; }
+  .hero p { font-size: 1rem; }
+  .section { padding: 60px 15px; }
+  .results { flex-direction: column; align-items: center; }
+  .result-card { width: 90%; }
+  .cards .card { width: 90%; height: 90px; }
+  .coach-card { width: 90%; height: auto; }
+  .card-ring { width: 110px; height: 110px; }
+  .contact-section { padding: 40px 15px; }
 }
