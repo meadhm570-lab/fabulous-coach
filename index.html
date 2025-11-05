@@ -9,49 +9,35 @@
 
 <body>
 
-  <!-- HERO -->
+  <!-- SECTION HERO AVEC FOND -->
   <header class="hero">
-    <img src="logo.jpeg" alt="Fabulous Coach Logo" class="hero-logo" />
-    <h1>Fabulous Coach</h1>
-    <p>Transforme ton corps, dépasse tes limites.</p>
+    <div class="overlay"></div>
+
+    <nav class="navbar">
+      <div class="navbar-left">
+        <img src="logo.jpeg" alt="Logo Fabulous Coach" class="logo">
+        <span class="brand-name">Fabulous Coach</span>
+      </div>
+      <div class="navbar-right">
+        <a href="#" title="Instagram">📸</a>
+        <a href="#" title="TikTok">🎵</a>
+        <a href="#" title="Facebook">📘</a>
+      </div>
+    </nav>
+
+    <div class="hero-content">
+      <h1>Fabien Jablonski</h1>
+      <h2>Coach sportif certifié – Fabulous Coach</h2>
+      <p>
+        Spécialisé en musculation et remise en forme depuis plus de 10 ans.<br>
+        J’aide mes clients à atteindre leurs objectifs physiques et mentaux grâce à un accompagnement sur mesure.
+      </p>
+      <span class="since">Depuis 2015</span>
+    </div>
   </header>
 
-  <!-- CARTES DE VALEURS -->
-  <div class="cards">
-    <div class="card red">
-      <p class="tip">Discipline</p>
-      <p class="second-text">La clé de tout progrès</p>
-    </div>
-    <div class="card blue">
-      <p class="tip">Motivation</p>
-      <p class="second-text">Chaque jour est une nouvelle chance</p>
-    </div>
-    <div class="card green">
-      <p class="tip">Résultats</p>
-      <p class="second-text">Ton corps, ta réussite</p>
-    </div>
-  </div>
-
-  <!-- CARTE COACH -->
-  <div class="coach-card">
-    <div class="card-bg"></div>
-    <div class="card-inner">
-      <div class="card-ring"></div>
-      <div class="card-content">
-        <h3>Fabien Jablonski</h3>
-        <p class="subtitle">Coach sportif certifié – Fabulous Coach</p>
-        <p class="description">
-          Spécialisé en musculation et remise en forme depuis plus de 10 ans.<br />
-          J’aide mes clients à atteindre leurs objectifs physiques et mentaux
-          grâce à un accompagnement sur mesure.
-        </p>
-        <span class="year">Depuis 2015</span>
-      </div>
-    </div>
-  </div>
-
-  <!-- EXPÉRIENCES -->
-  <section class="section light-bg" id="experience">
+  <!-- SECTION EXPÉRIENCES -->
+  <section class="section light-bg">
     <h2 class="section-title">Expériences Professionnelles</h2>
     <ul class="experience-list">
       <li><strong>2024 - 2025 :</strong> Coach sportif – Basic Fit Mistral 7</li>
@@ -62,7 +48,7 @@
     </ul>
   </section>
 
-  <!-- FORMULAIRE CONTACT -->
+  <!-- FORMULAIRE DE CONTACT -->
   <section id="contact" class="contact-section">
     <h2>Contact & Coaching</h2>
     <p>Remplissez ce formulaire pour commencer votre transformation.</p>
@@ -77,110 +63,22 @@
       <input type="hidden" name="_subject" value="Nouvelle demande coaching !">
       <input type="hidden" name="_template" value="table">
 
-      <!-- ÉTAPE 1 -->
-      <div class="form-step step-1 active">
-        <label>Nom et Prénom *</label>
-        <input type="text" name="Nom-prenom" required>
+      <label>Nom et Prénom *</label>
+      <input type="text" name="Nom-prenom" required>
 
-        <label>Sexe *</label>
-        <select name="Sexe" required>
-          <option disabled selected>Choisir...</option>
-          <option>Homme</option>
-          <option>Femme</option>
-        </select>
+      <label>Email *</label>
+      <input type="email" name="Email" required>
 
-        <label>Taille (cm) *</label>
-        <input type="number" name="Taille" required>
+      <label>Message *</label>
+      <textarea name="Message" required></textarea>
 
-        <label>Âge *</label>
-        <input type="number" name="Age" required>
-
-        <label>Poids actuel (kg) *</label>
-        <input type="number" name="Poids-actuel" required>
-
-        <label>Objectif (kg) *</label>
-        <input type="number" name="Poids-objectif" required>
-
-        <label>Email *</label>
-        <input type="email" name="Email" required>
-
-        <label>Téléphone *</label>
-        <input type="tel" name="Telephone" required>
-
-        <button type="button" class="btn-next">Suivant ➜</button>
-      </div>
-
-      <!-- ÉTAPE 2 -->
-      <div class="form-step step-2">
-        <label>Profession</label>
-        <input type="text" name="Profession">
-
-        <label>Horaires & contraintes</label>
-        <textarea name="Horaires"></textarea>
-
-        <label>Niveau d’activité</label>
-        <select name="Activite">
-          <option>Sédentaire</option>
-          <option>Actif modéré</option>
-          <option>Très actif</option>
-        </select>
-
-        <label>Temps disponible (h/sem)</label>
-        <input type="text" name="Temps-disponible">
-
-        <label>Sports actuels</label>
-        <textarea name="Sport"></textarea>
-
-        <label>Informations importantes</label>
-        <textarea name="Infos-importantes"></textarea>
-
-        <label>Questions ou attentes spécifiques</label>
-        <textarea name="Questions"></textarea>
-
-        <label>Contraintes particulières</label>
-        <textarea name="Contraintes"></textarea>
-
-        <div class="step-buttons">
-          <button type="button" class="btn-back">⬅️ Retour</button>
-          <button type="submit" class="btn-send">Envoyer ✅</button>
-        </div>
-      </div>
+      <button type="submit" class="btn-send">Envoyer ✅</button>
     </form>
 
     <p id="successMessage" class="success-message" style="display:none;">
       ✅ Merci, je te recontacte vite !
     </p>
   </section>
-
-  <!-- CARTE DU COACH -->
-  <div class="card-client">
-    <div class="user-picture">
-      <img src="logo.jpeg" alt="Fabulous Coach" />
-    </div>
-    <p class="name-client">
-      Fabien Jablonski
-      <span>Coach Sportif</span>
-    </p>
-
-    <div class="social-media">
-      <a href="https://instagram.com/fabulous.coach" target="_blank">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7.75 2h8.5C19.097 2 21 3.903 21 6.25v11.5C21 19.097 19.097 21 16.25 21h-8.5C4.903 21 3 19.097 3 16.75V6.25C3 3.903 4.903 2 7.75 2zm8.5 1.5h-8.5a2.25 2.25 0 0 0-2.25 2.25v10.5A2.25 2.25 0 0 0 7.75 18.5h8.5A2.25 2.25 0 0 0 18.5 16.25V6.25A2.25 2.25 0 0 0 16.25 3.5zm-4.25 3.25a4.25 4.25 0 1 1 0 8.5 4.25 4.25 0 0 1 0-8.5zm0 1.5a2.75 2.75 0 1 0 0 5.5 2.75 2.75 0 0 0 0-5.5zm4.5-.75a.75.75 0 1 1 0 1.5.75.75 0 0 1 0-1.5z"/></svg>
-        <span class="tooltip-social">Instagram</span>
-      </a>
-      <a href="https://www.tiktok.com/@fabulous..coach" target="_blank">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M16.5 3.5a6.5 6.5 0 0 1-3-1v10.3a4.3 4.3 0 1 1-4.3-4.3 4.3 4.3 0 0 1 .9.1V6.6a6.3 6.3 0 1 0 7.4 6.2V8.1a6.5 6.5 0 0 1-1-.1z"/></svg>
-        <span class="tooltip-social">TikTok</span>
-      </a>
-      <a href="https://facebook.com/FabienJablonski" target="_blank">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M22 12a10 10 0 1 0-11.5 9.9v-7h-2v-2.9h2v-2.3c0-2 1.2-3.1 3-3.1.9 0 1.8.1 1.8.1v2h-1c-1 0-1.3.6-1.3 1.2v2.1h2.3l-.4 2.9h-1.9v7A10 10 0 0 0 22 12z"/></svg>
-        <span class="tooltip-social">Facebook</span>
-      </a>
-      <a href="mailto:fabien.jablonski@hotmail.fr" target="_blank">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Zm0 2v.5l-8 5-8-5V6h16Zm-16 12V9l8 5 8-5v9H4Z"/></svg>
-        <span class="tooltip-social">Email</span>
-      </a>
-    </div>
-  </div>
 
   <!-- FOOTER -->
   <footer class="footer">
@@ -190,25 +88,8 @@
   <!-- SCRIPT -->
   <script>
     document.addEventListener("DOMContentLoaded", function () {
-      const steps = document.querySelectorAll(".form-step");
-      const nextBtn = document.querySelector(".btn-next");
-      const backBtn = document.querySelector(".btn-back");
       const form = document.getElementById("coachForm");
       const successMessage = document.getElementById("successMessage");
-
-      let currentStep = 0;
-
-      nextBtn.addEventListener("click", () => {
-        steps[currentStep].classList.remove("active");
-        currentStep = 1;
-        steps[currentStep].classList.add("active");
-      });
-
-      backBtn.addEventListener("click", () => {
-        steps[currentStep].classList.remove("active");
-        currentStep = 0;
-        steps[currentStep].classList.add("active");
-      });
 
       form.addEventListener("submit", function (e) {
         e.preventDefault();
@@ -216,9 +97,6 @@
         fetch(form.action, { method: "POST", body: formData })
           .then(() => {
             form.reset();
-            steps[currentStep].classList.remove("active");
-            currentStep = 0;
-            steps[currentStep].classList.add("active");
             successMessage.style.display = "block";
           })
           .catch(() => {
