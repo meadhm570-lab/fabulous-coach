@@ -1077,3 +1077,259 @@ body {
   opacity: 1;
   transform: translate(-50%, -130%);
 }
+/* ---- Carte Coach (Adaptée à ton thème marron/beige) ---- */
+.card-client {
+  background: #8a6a4d;
+  width: 14rem;
+  margin: 40px auto;
+  padding: 25px 20px;
+  border: 3px solid #d6b48c;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+  border-radius: 12px;
+  text-align: center;
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+  transition: all 0.3s ease;
+}
+
+.card-client:hover {
+  transform: translateY(-8px);
+}
+
+/* Photo du coach */
+.user-picture {
+  overflow: hidden;
+  width: 5.5rem;
+  height: 5.5rem;
+  border: 3px solid #d6b48c;
+  border-radius: 999px;
+  margin: 0 auto 15px auto;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.user-picture img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+/* Nom */
+.name-client {
+  margin: 0;
+  margin-top: 15px;
+  font-weight: 700;
+  font-size: 18px;
+  color: #fff;
+}
+
+.name-client span {
+  display: block;
+  font-weight: 300;
+  font-size: 15px;
+  color: #f8e8d4;
+}
+
+/* Ligne séparatrice */
+.social-media:before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2px;
+  margin: 20px 0;
+  background: #d6b48c;
+}
+
+/* Icônes réseaux */
+.social-media a {
+  position: relative;
+  margin-right: 15px;
+  text-decoration: none;
+  color: inherit;
+  display: inline-block;
+}
+
+.social-media a:last-child {
+  margin-right: 0;
+}
+
+.social-media a svg {
+  width: 1.2rem;
+  fill: #fff;
+  transition: 0.3s;
+}
+
+.social-media a:hover svg {
+  fill: #d6b48c;
+  transform: scale(1.15);
+}
+
+/* Tooltip */
+.tooltip-social {
+  background: #262626;
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  padding: 0.4rem 0.5rem;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  opacity: 0;
+  pointer-events: none;
+  transform: translate(-50%, -90%);
+  transition: all 0.2s ease;
+  color: #fff;
+  z-index: 1;
+}
+
+.tooltip-social:after {
+  content: "";
+  position: absolute;
+  bottom: 1px;
+  left: 50%;
+  border: solid;
+  border-width: 6px 6px 0 6px;
+  border-color: transparent;
+  transform: translate(-50%, 100%);
+}
+
+.social-media a .tooltip-social:after {
+  border-top-color: #262626;
+}
+
+.social-media a:hover .tooltip-social {
+  opacity: 1;
+  transform: translate(-50%, -130%);
+}
+/* ---- Carte Coach (Adaptée à ton thème marron/beige) ---- */
+.card-client {
+  background: #8a6a4d;
+  width: 14rem;
+  margin: 40px auto;
+  padding: 25px 20px;
+  border: 3px solid #d6b48c;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+  border-radius: 12px;
+  text-align: center;
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+  transition: all 0.3s ease;
+}
+
+.card-client:hover {
+  transform: translateY(-8px);
+}
+
+/* Photo du coach */
+.user-picture {
+  overflow: hidden;
+  width: 5.5rem;
+  height: 5.5rem;
+  border: 3px solid #d6b48c;
+  border-radius: 999px;
+  margin: 0 auto 15px auto;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.user-picture img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+/* Nom */
+.name-client {
+  margin: 0;
+  margin-top: 15px;
+  font-weight: 700;
+  font-size: 18px;
+  color: #fff;
+}
+
+.name-client span {
+  display: block;
+  font-weight: 300;
+  font-size: 15px;
+  color: #f8e8d4;
+}
+
+/* Ligne séparatrice */
+.social-media:before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2px;
+  margin: 20px 0;
+  background: #d6b48c;
+}
+
+/* Icônes réseaux */
+.social-media a {
+  position: relative;
+  margin-right: 15px;
+  text-decoration: none;
+  color: inherit;
+  display: inline-block;
+}
+
+.social-media a:last-child {
+  margin-right: 0;
+}
+
+.social-media a svg {
+  width: 1.2rem;
+  fill: #fff;
+  transition: 0.3s;
+}
+
+.social-media a:hover svg {
+  fill: #d6b48c;
+  transform: scale(1.15);
+}
+
+/* Tooltip */
+.tooltip-social {
+  background: #262626;
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  padding: 0.4rem 0.5rem;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  opacity: 0;
+  pointer-events: none;
+  transform: translate(-50%, -90%);
+  transition: all 0.2s ease;
+  color: #fff;
+  z-index: 1;
+}
+
+.tooltip-social:after {
+  content: "";
+  position: absolute;
+  bottom: 1px;
+  left: 50%;
+  border: solid;
+  border-width: 6px 6px 0 6px;
+  border-color: transparent;
+  transform: translate(-50%, 100%);
+}
+
+.social-media a .tooltip-social:after {
+  border-top-color: #262626;
+}
+
+.social-media a:hover .tooltip-social {
+  opacity: 1;
+  transform: translate(-50%, -130%);
+}
