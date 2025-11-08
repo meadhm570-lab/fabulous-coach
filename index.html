@@ -112,40 +112,36 @@
 
       <!-- ÉTAPE 2 -->
       
-      <div class="form-step step-2">
-        <label>Profession</label>
-        <input type="text" name="Profession">
- <!-- supprimer -->
-        <label>Horaires & contraintes</label>
-        <textarea name="Horaires"></textarea>
+    <div class="form-step step-2">
+  <label>Profession</label>
+  <input type="text" name="Profession">
 
-        <label>Niveau d’activité</label>
-        <select name="Activite">
-          <option>Sédentaire</option>
-          <option>Actif modéré</option>
-          <option>Très actif</option>
-        </select>
+  <label>Niveau d’activité</label>
+  <select name="Activite">
+    <option>Sédentaire</option>
+    <option>Actif modéré</option>
+    <option>Très actif</option>
+  </select>
 
-        <label>Disponibilité (h/sem)</label>
-        <input type="text" name="Temps-disponible">
+  <label>Disponibilité (h/sem)</label>
+  <input type="text" name="Temps-disponible">
 
-        <label>Sports actuels</label>
-        <textarea name="Sport"></textarea>
- <!-- supprimer -->
-        <label>Informations importantes</label>
-        <textarea name="Infos-importantes"></textarea>
+  <label>Sports actuels</label>
+  <textarea name="Sport"></textarea>
 
-        <label>Questions ou attentes spécifiques</label>
-        <textarea name="Questions"></textarea>
- <!-- Contraintes phisique -->
-        <label>Contraintes particulières</label>
-        <textarea name="Contraintes"></textarea>
+  <label>Questions ou attentes spécifiques</label>
+  <textarea name="Questions"></textarea>
 
-        <div class="step-buttons">
-          <button type="button" class="btn-back">⬅️ Retour</button>
-          <button type="submit" class="btn-send">Envoyer ✅</button>
-        </div>
-      </div>
+  <!-- Nouvelle section ajoutée -->
+  <label>Contraintes physiques ou particulières</label>
+  <textarea name="Contraintes"></textarea>
+
+  <div class="step-buttons">
+    <button type="button" class="btn-back">⬅️ Retour</button>
+    <button type="submit" class="btn-send">Envoyer ✅</button>
+  </div>
+</div>
+
     </form>
 
     <p id="successMessage" class="success-message" style="display:none;">
