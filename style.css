@@ -138,14 +138,6 @@ body {
   justify-content: space-between;
 }
 
-.card-ring {
-  width: 140px;
-  height: 140px;
-  margin: 10px auto;
-  border-radius: 50%;
-  background: conic-gradient(from 0deg, #b77d5d, #f3c59d, #b77d5d);
-  animation: spin 14s linear infinite;
-}
 
 @keyframes spin { to { transform: rotate(360deg); } }
 
