@@ -469,3 +469,123 @@ body {
   from {opacity: 0; transform: translateY(40px);}
   to {opacity: 1; transform: translateY(0);}
 }
+/* ===============================
+   SECTION TANITA PRO
+=============================== */
+.tanita-pro {
+  max-width: 1100px;
+  margin: 60px auto;
+  padding: 40px 20px;
+  text-align: center;
+  background: linear-gradient(180deg, #faf8f5, #f4ece4);
+  border-radius: 20px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  animation: fadeIn 1s ease;
+}
+
+.tanita-header h2 {
+  font-size: 2rem;
+  color: #7b5233;
+  margin-bottom: 15px;
+}
+
+.tanita-header p {
+  color: #555;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 40px;
+}
+
+.tanita-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.tanita-card {
+  width: 300px;
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.tanita-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 20px rgba(0,0,0,0.15);
+}
+
+.tanita-image {
+  height: 180px;
+  background-size: cover;
+  background-position: center;
+}
+
+.tanita-content {
+  padding: 15px 20px;
+}
+
+.tanita-content h3 {
+  color: #1797b8;
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+}
+
+.tanita-content p {
+  color: #666;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+.tanita-button {
+  padding: 15px 20px;
+  text-align: center;
+}
+
+.tanita-button button {
+  background: linear-gradient(90deg, #1797b8, #27b0d6);
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 20px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.tanita-button button:hover {
+  background: linear-gradient(90deg, #15849f, #1f9cb9);
+  transform: scale(1.05);
+}
+
+/* ===============================
+   RESPONSIVE
+=============================== */
+@media (max-width: 768px) {
+  .tanita-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .tanita-card {
+    width: 90%;
+  }
+
+  .tanita-header h2 {
+    font-size: 1.6rem;
+  }
+
+  .tanita-header p {
+    font-size: 0.95rem;
+  }
+}
+
+@keyframes fadeIn {
+  from {opacity: 0; transform: translateY(20px);}
+  to {opacity: 1; transform: translateY(0);}
+}
