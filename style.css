@@ -37,7 +37,10 @@ body {
    HERO SECTION
 ============================== */
 .hero {
-  background: linear-gradient(to bottom, #c8a27f, #5a3e36);
+  background: linear-gradient(to bottom, rgba(200, 162, 127, 0.7), rgba(90, 62, 54, 0.8)), url('coach.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   color: #fff;
   height: 100vh;
   display: flex;
@@ -46,27 +49,43 @@ body {
   justify-content: center;
   text-align: center;
   padding: 0 20px;
+  position: relative;
+  border: 8px solid #c8a27f;
+  box-shadow: inset 0 0 0 4px rgba(255, 255, 255, 0.3);
 }
 
 .hero-logo {
-  width: 200px;
-  height: 200px;
+  width: 120px;
+  height: 120px;
   border-radius: 50%;
   object-fit: cover;
-  margin-bottom: 20px;
   background-color: #fff;
-  padding: 10px;
+  padding: 8px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  position: absolute;
+  top: 20px;
+  left: 20px;
 }
 
 .hero h1 {
-  font-size: 3rem;
-  margin-bottom: 10px;
+  font-size: 2rem;
+  margin-bottom: 8px;
+  position: absolute;
+  top: 30px;
+  left: 160px;
+  text-align: left;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .hero p {
-  font-size: 1.3rem;
-  opacity: 0.9;
+  font-size: 1rem;
+  opacity: 0.95;
+  position: absolute;
+  top: 75px;
+  left: 160px;
+  text-align: left;
+  max-width: 350px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
 }
 
 /* ==============================
@@ -83,7 +102,7 @@ body {
   margin: 40px auto;
   border-radius: 20px;
   overflow: hidden;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .card-bg {
@@ -103,7 +122,11 @@ body {
   justify-content: space-between;
 }
 
-@keyframes spin { to { transform: rotate(360deg); } }
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
 
 .card-content {
   text-align: center;
@@ -144,7 +167,7 @@ body {
   background: #fffdfb;
   padding: 25px;
   border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   line-height: 1.8;
 }
 
@@ -179,7 +202,9 @@ body {
   background: #fff;
 }
 
-.contact-form textarea { min-height: 80px; }
+.contact-form textarea {
+  min-height: 80px;
+}
 
 .btn-next,
 .btn-back,
@@ -195,19 +220,33 @@ body {
 }
 
 .btn-next,
-.btn-back { background: #9b7755; color: #fff; }
+.btn-back {
+  background: #9b7755;
+  color: #fff;
+}
+
 .btn-next:hover,
-.btn-back:hover { background: #7b5f43; }
+.btn-back:hover {
+  background: #7b5f43;
+}
 
 .btn-send {
   background: #006c3b;
   color: #fff;
   font-weight: bold;
 }
-.btn-send:hover { background: #00522d; }
 
-.form-step { display: none; }
-.form-step.active { display: block; }
+.btn-send:hover {
+  background: #00522d;
+}
+
+.form-step {
+  display: none;
+}
+
+.form-step.active {
+  display: block;
+}
 
 .success-message {
   margin-top: 20px;
@@ -228,14 +267,16 @@ body {
   margin: 40px auto;
   padding: 25px 20px;
   border: 3px solid #d6b48c;
-  box-shadow: 0 6px 12px rgba(0,0,0,0.25);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
   border-radius: 12px;
   text-align: center;
   color: #fff;
   transition: 0.3s;
 }
 
-.card-client:hover { transform: translateY(-8px); }
+.card-client:hover {
+  transform: translateY(-8px);
+}
 
 .user-picture {
   overflow: hidden;
@@ -336,16 +377,66 @@ body {
    RESPONSIVE
 ============================== */
 @media (max-width: 768px) {
-  .hero h1 { font-size: 2.3rem; }
-  .hero p { font-size: 1rem; }
-  .section { padding: 60px 15px; }
-  .results { flex-direction: column; align-items: center; }
-  .result-card { width: 90%; }
-  .cards .card { width: 90%; height: 90px; }
-  .coach-card { width: 90%; height: auto; }
-  .card-ring { width: 110px; height: 110px; }
-  .contact-section { padding: 40px 15px; }
+  .hero {
+    border: 4px solid #c8a27f;
+    box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.3);
+  }
+
+  .hero-logo {
+    width: 80px;
+    height: 80px;
+    top: 15px;
+    left: 15px;
+    padding: 5px;
+  }
+
+  .hero h1 {
+    font-size: 1.3rem;
+    top: 20px;
+    left: 110px;
+    max-width: calc(100% - 130px);
+  }
+
+  .hero p {
+    font-size: 0.85rem;
+    top: 55px;
+    left: 110px;
+    max-width: calc(100% - 130px);
+  }
+
+  .section {
+    padding: 60px 15px;
+  }
+
+  .results {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .result-card {
+    width: 90%;
+  }
+
+  .cards .card {
+    width: 90%;
+    height: 90px;
+  }
+
+  .coach-card {
+    width: 90%;
+    height: auto;
+  }
+
+  .card-ring {
+    width: 110px;
+    height: 110px;
+  }
+
+  .contact-section {
+    padding: 40px 15px;
+  }
 }
+
 /* ====== TANITA Section ====== */
 .tanita-section {
   text-align: center;
@@ -354,7 +445,7 @@ body {
   border-radius: 25px;
   margin: 50px auto;
   max-width: 1000px;
-  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
   animation: fadeIn 1.2s ease;
 }
 
@@ -383,7 +474,7 @@ body {
   height: 320px;
   background: #fff;
   border-radius: 15px;
-  box-shadow: 0 6px 14px rgba(0,0,0,0.1);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   transition: transform 0.4s ease, box-shadow 0.4s ease;
   cursor: pointer;
@@ -392,7 +483,7 @@ body {
 
 .card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 12px 18px rgba(0,0,0,0.15);
+  box-shadow: 0 12px 18px rgba(0, 0, 0, 0.15);
 }
 
 .card-image-container {
@@ -425,14 +516,29 @@ body {
 
 /* Animations */
 @keyframes fadeIn {
-  from {opacity: 0; transform: translateY(20px);}
-  to {opacity: 1; transform: translateY(0);}
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @keyframes floatUp {
-  from {opacity: 0; transform: translateY(40px);}
-  to {opacity: 1; transform: translateY(0);}
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
+
 /* ===============================
    SECTION TANITA PRO
 =============================== */
@@ -443,7 +549,7 @@ body {
   text-align: center;
   background: linear-gradient(180deg, #faf8f5, #f4ece4);
   border-radius: 20px;
-  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
   animation: fadeIn 1s ease;
 }
 
@@ -471,7 +577,7 @@ body {
   width: 300px;
   background: #fff;
   border-radius: 15px;
-  box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   display: flex;
   flex-direction: column;
@@ -480,7 +586,7 @@ body {
 
 .tanita-card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 12px 20px rgba(0,0,0,0.15);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
 }
 
 .tanita-image {
@@ -550,9 +656,17 @@ body {
 }
 
 @keyframes fadeIn {
-  from {opacity: 0; transform: translateY(20px);}
-  to {opacity: 1; transform: translateY(0);}
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
+
 .tanita-button a {
   display: inline-block;
   text-decoration: none;
