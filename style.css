@@ -591,8 +591,9 @@ body {
 
 .tanita-image {
   height: 180px;
-  background-size: cover;
+  background-size: contain;
   background-position: center;
+  background-repeat: no-repeat;
 }
 
 .tanita-content {
