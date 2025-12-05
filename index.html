@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -72,12 +73,11 @@
     <h2>Contact & Coaching</h2>
     <p>Remplissez ce formulaire pour commencer votre transformation.</p>
 
-    <form 
-      id="coachForm"
-      action="https://formspree.io/f/xyzrpbjl"
-      method="POST"
-      class="contact-form"
-    >
+    <form id="coachForm" action="https://formspree.io/f/mwpgqwye" method="POST" class="contact-form">
+      <!-- Champs cachés pour améliorer la présentation des emails -->
+      <input type="hidden" name="_subject" value="🏋️ Nouvelle demande de coaching - Fabulous Coach">
+      <input type="hidden" name="_replyto" value="">
+      <input type="hidden" name="_template" value="box">
 
       <!-- ÉTAPE 1 -->
       <div class="form-step step-1 active">
@@ -96,7 +96,7 @@
 
         <label>Âge *</label>
         <input type="number" name="Age" required>
-        
+
         <label>Ville</label>
         <input type="text" name="Ville" placeholder="Ex : Paris">
 
@@ -190,9 +190,26 @@
 
       // aller à l'étape suivante
       nextBtn.addEventListener("click", () => {
-        steps[currentStep].classList.remove("active");
-        currentStep = 1;
-        steps[currentStep].classList.add("active");
+        // Valider les champs requis de l'étape 1
+        const step1Inputs = steps[0].querySelectorAll("input[required], select[required]");
+        let allValid = true;
+
+        step1Inputs.forEach(input => {
+          if (!input.value || input.value.trim() === "") {
+            allValid = false;
+            input.style.border = "2px solid red";
+          } else {
+            input.style.border = "";
+          }
+        });
+
+        if (allValid) {
+          steps[currentStep].classList.remove("active");
+          currentStep = 1;
+          steps[currentStep].classList.add("active");
+        } else {
+          alert("Veuillez remplir tous les champs obligatoires (*)");
+        }
       });
 
       // revenir à l'étape précédente
@@ -208,6 +225,10 @@
 
         const formData = new FormData(form);
 
+        // Ajouter l'email du client comme adresse de réponse
+        const clientEmail = form.querySelector('input[name="Email"]').value;
+        formData.set("_replyto", clientEmail);
+
         const response = await fetch(form.action, {
           method: "POST",
           body: formData,
@@ -220,12 +241,18 @@
           steps[currentStep].classList.remove("active");
           currentStep = 0;
           steps[currentStep].classList.add("active");
+
+          // Cacher le message de succès après 5 secondes
+          setTimeout(() => {
+            successMessage.style.display = "none";
+          }, 5000);
         } else {
-          alert("Erreur lors de l’envoi, veuillez réessayer.");
+          alert("Erreur lors de l'envoi, veuillez réessayer.");
         }
       });
     });
   </script>
 
 </body>
+
 </html>
